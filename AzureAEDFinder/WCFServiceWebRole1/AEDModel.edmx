@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="vtrescueModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="vtrescueModelStoreContainer">
+          <EntitySet Name="aed" EntityType="vtrescueModel.Store.aed" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="aed">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="SN" Type="varchar" MaxLength="50" />
+          <Property Name="department" Type="varchar" MaxLength="50" />
+          <Property Name="building" Type="varchar" MaxLength="50" />
+          <Property Name="lat" Type="float" />
+          <Property Name="long" Type="float" />
+          <Property Name="floor" Type="tinyint" />
+          <Property Name="pad_expiration" Type="date" />
+          <Property Name="loc_description" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="vtrescueModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="vtrescueEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="aeds" EntityType="vtrescueModel.aed" />
+        </EntityContainer>
+        <EntityType Name="aed">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="SN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="department" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="building" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="lat" Type="Double" />
+          <Property Name="long" Type="Double" />
+          <Property Name="floor" Type="Byte" />
+          <Property Name="pad_expiration" Type="DateTime" />
+          <Property Name="loc_description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="vtrescueModelStoreContainer" CdmEntityContainer="vtrescueEntities">
+          <EntitySetMapping Name="aeds"><EntityTypeMapping TypeName="vtrescueModel.aed"><MappingFragment StoreEntitySet="aed">
+            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="SN" ColumnName="SN" />
+            <ScalarProperty Name="department" ColumnName="department" />
+            <ScalarProperty Name="building" ColumnName="building" />
+            <ScalarProperty Name="lat" ColumnName="lat" />
+            <ScalarProperty Name="long" ColumnName="long" />
+            <ScalarProperty Name="floor" ColumnName="floor" />
+            <ScalarProperty Name="pad_expiration" ColumnName="pad_expiration" />
+            <ScalarProperty Name="loc_description" ColumnName="loc_description" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AEDModel">
+        <EntityTypeShape EntityType="vtrescueModel.aed" Width="1.5" PointX="0.75" PointY="0.75" Height="2.7694921875" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

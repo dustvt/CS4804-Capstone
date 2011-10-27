@@ -1,0 +1,17 @@
+﻿<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_AEDServiceInterface" maxBufferSize="2147483647"
+                    maxReceivedMessageSize="2147483647">
+                    <security mode="None" />
+                </binding>
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_AEDServiceInterface"
+                contract="AEDFinderServiceReference.AEDServiceInterface" name="BasicHttpBinding_AEDServiceInterface" />
+        </client>
+    </system.serviceModel>
+</configuration>

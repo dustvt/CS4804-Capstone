@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vtrescueModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="vtrescueEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="aeds" EntityType="vtrescueModel.aed" />
+  </EntityContainer>
+  <EntityType Name="aed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="SN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="department" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="building" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lat" Type="Double" />
+    <Property Name="long" Type="Double" />
+    <Property Name="floor" Type="Byte" />
+    <Property Name="pad_expiration" Type="DateTime" />
+    <Property Name="loc_description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+</Schema>

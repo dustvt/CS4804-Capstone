@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DeploymentBuildOnly>False</DeploymentBuildOnly>
+    <DeploymentAccountName>WindowsAzureAccount1</DeploymentAccountName>
+    <DeploymentHostedService>vtrescue</DeploymentHostedService>
+    <DeploymentHostedServiceLabel>VTRescue</DeploymentHostedServiceLabel>
+    <DeploymentSlot>Staging</DeploymentSlot>
+    <DeploymentIncludeIntellitrace>False</DeploymentIncludeIntellitrace>
+    <DeploymentIncludeProfiling>False</DeploymentIncludeProfiling>
+    <DeploymentEnableWebDeploy>False</DeploymentEnableWebDeploy>
+    <DeploymentStorageService>vtrescue</DeploymentStorageService>
+    <DeploymentStorageServiceLabel>vtrescue</DeploymentStorageServiceLabel>
+    <DeploymentLabel>AzureAEDFinder</DeploymentLabel>
+    <PublishSolutionConfiguration>Debug</PublishSolutionConfiguration>
+    <PublishProfile>Cloud</PublishProfile>
+    <TimestampLabel>True</TimestampLabel>
+    <PackageProfile>Cloud</PackageProfile>
+    <PackageSolutionConfiguration>Release</PackageSolutionConfiguration>
+  </PropertyGroup>
+</Project>

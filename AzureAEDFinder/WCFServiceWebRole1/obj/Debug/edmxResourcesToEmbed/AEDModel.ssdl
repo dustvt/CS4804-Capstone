@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="vtrescueModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="vtrescueModelStoreContainer">
+    <EntitySet Name="aed" EntityType="vtrescueModel.Store.aed" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="aed">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="SN" Type="varchar" MaxLength="50" />
+    <Property Name="department" Type="varchar" MaxLength="50" />
+    <Property Name="building" Type="varchar" MaxLength="50" />
+    <Property Name="lat" Type="float" />
+    <Property Name="long" Type="float" />
+    <Property Name="floor" Type="tinyint" />
+    <Property Name="pad_expiration" Type="date" />
+    <Property Name="loc_description" Type="varchar" MaxLength="100" />
+  </EntityType>
+</Schema>

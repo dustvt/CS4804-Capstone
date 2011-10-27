@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureAEDFinder", "AzureAEDFinder\AzureAEDFinder.ccproj", "{CC2287EC-1F76-4483-A685-F3BAD9C11986}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAEDFinderWCFServiceWebRole", "WCFServiceWebRole1\AzureAEDFinderWCFServiceWebRole.csproj", "{63BE523C-DEEB-4CE4-9ED3-1266D50BC93F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC2287EC-1F76-4483-A685-F3BAD9C11986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2287EC-1F76-4483-A685-F3BAD9C11986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2287EC-1F76-4483-A685-F3BAD9C11986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2287EC-1F76-4483-A685-F3BAD9C11986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63BE523C-DEEB-4CE4-9ED3-1266D50BC93F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63BE523C-DEEB-4CE4-9ED3-1266D50BC93F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63BE523C-DEEB-4CE4-9ED3-1266D50BC93F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63BE523C-DEEB-4CE4-9ED3-1266D50BC93F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
