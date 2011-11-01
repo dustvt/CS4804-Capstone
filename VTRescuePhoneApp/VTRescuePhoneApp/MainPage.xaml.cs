@@ -23,7 +23,7 @@ namespace VTRescuePhoneApp
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("/AEDMap.xaml", UriKind.Relative));
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
