@@ -13,22 +13,11 @@ using Microsoft.Phone.Controls;
 
 namespace VTRescuePhoneApp
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class Page1 : PhoneApplicationPage
     {
-        // Constructor
-        public MainPage()
+        public Page1()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/AEDMap.xaml", UriKind.Relative));
-        }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
