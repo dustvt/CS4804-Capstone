@@ -1,9 +1,0 @@
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\bin\WCFServiceWebRole1.dll
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\bin\WCFServiceWebRole1.pdb
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.dll
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.StorageClient.dll
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.Diagnostics.xml
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\bin\Microsoft.WindowsAzure.StorageClient.xml
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\ResolveAssemblyReference.cache
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.dll
-c:\users\jeff\documents\visual studio 2010\Projects\AzureAEDFinder\WCFServiceWebRole1\obj\Debug\WCFServiceWebRole1.pdb
