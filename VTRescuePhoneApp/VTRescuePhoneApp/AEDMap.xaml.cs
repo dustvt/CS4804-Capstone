@@ -21,6 +21,7 @@ namespace VTRescuePhoneApp
         GeoCoordinateWatcher watcher;
         public Page1()
         {
+            InitializeComponent();
             AEDFinderServiceReference.AEDServiceInterfaceClient AEDServiceInterfaceClient = new AEDFinderServiceReference.AEDServiceInterfaceClient();
             AEDServiceInterfaceClient.GetAllAEDsCompleted += new EventHandler<AEDFinderServiceReference.GetAllAEDsCompletedEventArgs>(AEDFinderService_GetAllAEDsCompleted);
 
@@ -37,7 +38,7 @@ namespace VTRescuePhoneApp
 
                 watcher.Start();
             }
-            map1.ZoomLevel = 10;
+            map1.ZoomLevel = 15;
         }
 
         void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
