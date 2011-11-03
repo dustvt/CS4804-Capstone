@@ -29,7 +29,8 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button Content="Emergency" Height="72" HorizontalAlignment="Left" Margin="107,99,0,0" Name="button1" VerticalAlignment="Top" Width="250" Click="button1_Click" />
-            <Button Content="Non-Emergency" Height="72" HorizontalAlignment="Left" Margin="107,286,0,0" Name="button2" VerticalAlignment="Top" Width="250" Click="button2_Click" />
+            <Button Content="Non-Emergency" Height="72" HorizontalAlignment="Left" Margin="107,245,0,0" Name="button2" VerticalAlignment="Top" Width="250" Click="button2_Click" />
+            <Button Content="Call 911" Height="72" HorizontalAlignment="Left" Margin="107,392,0,0" Name="button3" VerticalAlignment="Top" Width="250" Click="button3_Click" />
         </Grid>
     </Grid>
  

@@ -67,8 +67,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AEDMap.xaml.cs">
+    <Compile Include="Views\AEDMap.xaml.cs">
       <DependentUpon>AEDMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Responsive.xaml.cs">
+      <DependentUpon>Responsive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UnderConstruction.xaml.cs">
+      <DependentUpon>UnderConstruction.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\AEDFinderServiceReference\Reference.cs">
@@ -86,7 +92,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AEDMap.xaml">
+    <Page Include="Views\AEDMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Responsive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UnderConstruction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
