@@ -68,7 +68,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Views\AEDArrived.xaml.cs">
       <DependentUpon>AEDArrived.xaml</DependentUpon>
     </Compile>
@@ -87,11 +86,6 @@
     <Compile Include="Views\NoResponsive.xaml.cs">
       <DependentUpon>NoResponsive.xaml</DependentUpon>
     </Compile>
-=======
-    <Compile Include="Views\AEDMap.xaml.cs">
-      <DependentUpon>AEDMap.xaml</DependentUpon>
-    </Compile>
->>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
     <Compile Include="Views\Responsive.xaml.cs">
       <DependentUpon>Responsive.xaml</DependentUpon>
     </Compile>
@@ -117,7 +111,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-<<<<<<< HEAD
     <Page Include="Views\AEDArrived.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -134,31 +127,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-=======
->>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
     <Page Include="Views\AEDMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-<<<<<<< HEAD
     <Page Include="Views\NoResponsive.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-=======
->>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
     <Page Include="Views\Responsive.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\UnderConstruction.xaml">
-<<<<<<< HEAD
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\YesResponsive.xaml">
-=======
->>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
