@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="VTRescuePhoneApp.NoResponsive"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+    
+    <Grid x:Name="LayoutRoot">
+        <Rectangle Height="230" HorizontalAlignment="Left" Margin="72,60,0,0" Name="rectangle1" Stroke="WhiteSmoke" StrokeThickness="8" VerticalAlignment="Top" Width="350" StrokeLineJoin="Bevel" StrokeStartLineCap="Flat" Stretch="Fill" UseLayoutRounding="False" StrokeMiterLimit="8" StrokeEndLineCap="Flat">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFCAB2B4" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Height="77" HorizontalAlignment="Left" Margin="159,100,0,303" Name="textBlock1" Text="Call 911 and get an AED" VerticalAlignment="Center" Width="169" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" FontSize="28" />
+        <Button Content="Close" Height="72" HorizontalAlignment="Left" Margin="168,204,0,0" Name="button1" VerticalAlignment="Top" Width="160" BorderBrush="White" BorderThickness="4" FontSize="24" Foreground="WhiteSmoke" UseLayoutRounding="True" Click="button1_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+                    <GradientStop Color="Violet" Offset="0" />
+                    <GradientStop Color="Black" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

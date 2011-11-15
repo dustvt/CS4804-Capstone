@@ -1,0 +1,16 @@
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\ApplicationIcon.png
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\Background.png
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\VTRescuePhoneApp.dll
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\VTRescuePhoneApp.pdb
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\AppManifest.xaml
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\VTRescuePhoneApp.xap
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\Microsoft.Phone.Controls.Maps.dll
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Debug\Microsoft.Phone.Controls.Maps.xml
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\App.g.i.cs
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\MainPage.g.i.cs
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\AEDMap.g.i.cs
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\VTRescuePhoneApp.g.resources
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\VTRescuePhoneApp.dll
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\VTRescuePhoneApp.pdb
+C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Debug\XapCacheFile.xml
