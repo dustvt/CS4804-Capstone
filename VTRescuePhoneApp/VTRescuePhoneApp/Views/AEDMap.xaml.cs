@@ -56,10 +56,13 @@ namespace VTRescuePhoneApp
                 map1.Children.Add(pin);
             }
         }
+<<<<<<< HEAD
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/Pulse.xaml", UriKind.Relative));
         }
+=======
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
     }
 }

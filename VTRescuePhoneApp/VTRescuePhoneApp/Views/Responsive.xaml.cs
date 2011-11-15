@@ -4,7 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
+<<<<<<< HEAD
 using System.Windows.Controls.Primitives;
+=======
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -23,6 +26,7 @@ namespace VTRescuePhoneApp.Views
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             Popup yes;
             yes = new Popup();
             yes.Child = new YesResponsive();
@@ -48,14 +52,20 @@ namespace VTRescuePhoneApp.Views
             {
                 
             };
+=======
+
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Views/AEDMap.xaml", UriKind.Relative));
         }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
     }
 }

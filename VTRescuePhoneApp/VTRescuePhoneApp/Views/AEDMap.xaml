@@ -14,13 +14,18 @@
     shell:SystemTray.IsVisible="True" xmlns:my="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
+<<<<<<< HEAD
     <Grid x:Name="LayoutRoot" Background="Black">
+=======
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
+<<<<<<< HEAD
         <StackPanel x:Name="TitlePanel" Margin="12,27,169,21" Height="86">
             <TextBlock x:Name="PageTitle" Text="Find AED" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Width="453" Foreground="White" FontSize="70" Height="94" />
         </StackPanel>
@@ -30,6 +35,17 @@
             <my:Map Height="634" HorizontalAlignment="Left" Margin="6,-6,0,0" Name="map1" CredentialsProvider="AiKWI43VpOgjeU_4bY_NhBFYvC6Mju6PpyIjjjO6dCymkR-H_z1akDLBAHCkCjnB" VerticalAlignment="Top" Width="443" />
         </Grid>
         <Button Content="NEXT" Height="122" HorizontalAlignment="Left" Margin="310,12,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" Background="Turquoise" BorderBrush="White" />
+=======
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="VT RESCUE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Find AED" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <my:Map Height="607" HorizontalAlignment="Left" Margin="6,0,0,0" Name="map1" CredentialsProvider="AiKWI43VpOgjeU_4bY_NhBFYvC6Mju6PpyIjjjO6dCymkR-H_z1akDLBAHCkCjnB" VerticalAlignment="Top" Width="462" />
+        </Grid>
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

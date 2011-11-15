@@ -14,6 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
+<<<<<<< HEAD
     <Grid x:Name="LayoutRoot" Background="#FF0B0207" Width="480">
         <Grid.RowDefinitions>
             <RowDefinition Height="0"/>
@@ -30,6 +31,24 @@
             <TextBlock x:Name="PageTitle" Text="Is the Person Responsive?" Margin="-12,43,-12,638" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" TextAlignment="Center" Width="480" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" />
             <Button Background="Plum" BorderThickness="0" Content="NO" FontSize="50" FontStyle="Normal" Foreground="White" Height="190" HorizontalAlignment="Left" Margin="0,359,0,0" Name="button2" VerticalAlignment="Top" Width="456" Click="button2_Click" />
             <Button Background="LightGreen" BorderThickness="0" Content="Find AED" FontSize="50" FontStyle="Normal" Foreground="White" Height="190" HorizontalAlignment="Left" Margin="0,555,0,0" Name="button3" VerticalAlignment="Top" Width="456" Click="button3_Click" />
+=======
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="Is the Person Responsive?" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="40" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button Content="Yes" Height="72" HorizontalAlignment="Center" Margin="122,136,130,0" Name="button1" VerticalAlignment="Top" Width="204" Click="button1_Click" />
+            <Button Content="No" Height="72" HorizontalAlignment="Center" Margin="122,272,130,0" Name="button2" VerticalAlignment="Top" Width="204" />
+            <Button Content="AED Map" Height="72" HorizontalAlignment="Center" Margin="122,424,130,0" Name="button3" VerticalAlignment="Top" Width="204" Click="button3_Click" />
+>>>>>>> 67040f17cc6f197386b8c6ca3ca863f4afc1e02e
         </Grid>
     </Grid>
  
