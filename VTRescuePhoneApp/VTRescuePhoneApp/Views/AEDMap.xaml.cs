@@ -47,11 +47,11 @@ namespace VTRescuePhoneApp
         }
         void AEDFinderService_GetAllAEDsCompleted(object sender, AEDFinderServiceReference.GetAllAEDsCompletedEventArgs e)
         {
-            ObservableCollection<AEDFinderServiceReference.aed> aedList = e.Result;
-            foreach (AEDFinderServiceReference.aed aed in aedList)
+            ObservableCollection<AEDFinderServiceReference.AED> aedList = e.Result;
+            foreach (AEDFinderServiceReference.AED aed in aedList)
             {
                 Pushpin pin = new Pushpin();
-                pin.Location = new GeoCoordinate((double)aed.lat, (double)aed.@long);
+                pin.Location = new GeoCoordinate((double)aed.latitude, (double)aed.@longitude);
 
                 map1.Children.Add(pin);
             }

@@ -62,8 +62,8 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="aed", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole", IsReference=true)]
-    public partial class aed : VTRescuePhoneApp.AEDFinderServiceReference.EntityObject {
+    [System.Runtime.Serialization.DataContractAttribute(Name="AED", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole", IsReference=true)]
+    public partial class AED : VTRescuePhoneApp.AEDFinderServiceReference.EntityObject {
         
         private int IDField;
         
@@ -73,15 +73,15 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         
         private string departmentField;
         
-        private System.Nullable<byte> floorField;
+        private int floorField;
         
-        private System.Nullable<double> latField;
+        private double latitudeField;
         
         private string loc_descriptionField;
         
-        private System.Nullable<double> longField;
+        private double longitudeField;
         
-        private System.Nullable<System.DateTime> pad_expirationField;
+        private System.DateTime pad_expirationField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int ID {
@@ -136,7 +136,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<byte> floor {
+        public int floor {
             get {
                 return this.floorField;
             }
@@ -149,14 +149,14 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<double> lat {
+        public double latitude {
             get {
-                return this.latField;
+                return this.latitudeField;
             }
             set {
-                if ((this.latField.Equals(value) != true)) {
-                    this.latField = value;
-                    this.RaisePropertyChanged("lat");
+                if ((this.latitudeField.Equals(value) != true)) {
+                    this.latitudeField = value;
+                    this.RaisePropertyChanged("latitude");
                 }
             }
         }
@@ -175,20 +175,20 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<double> @long {
+        public double longitude {
             get {
-                return this.longField;
+                return this.longitudeField;
             }
             set {
-                if ((this.longField.Equals(value) != true)) {
-                    this.longField = value;
-                    this.RaisePropertyChanged("long");
+                if ((this.longitudeField.Equals(value) != true)) {
+                    this.longitudeField = value;
+                    this.RaisePropertyChanged("longitude");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> pad_expiration {
+        public System.DateTime pad_expiration {
             get {
                 return this.pad_expirationField;
             }
@@ -205,7 +205,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="StructuralObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.EntityObject))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.aed))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
     public partial class StructuralObject : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
@@ -221,7 +221,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.aed))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
     public partial class EntityObject : VTRescuePhoneApp.AEDFinderServiceReference.StructuralObject {
         
         private VTRescuePhoneApp.AEDFinderServiceReference.EntityKey EntityKeyField;
@@ -306,8 +306,8 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.EntityObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.StructuralObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.aed))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.EntityKey))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.EntityKeyMember>))]
     public partial class EntityKeyMember : object, System.ComponentModel.INotifyPropertyChanged {
@@ -369,7 +369,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetAllAEDs", ReplyAction="http://tempuri.org/AEDServiceInterface/GetAllAEDsResponse")]
         System.IAsyncResult BeginGetAllAEDs(System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed> EndGetAllAEDs(System.IAsyncResult result);
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetAllAEDs(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -425,10 +425,10 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
             this.results = results;
         }
         
-        public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed> Result {
+        public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed>)(this.results[0]));
+                return ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(this.results[0]));
             }
         }
     }
@@ -616,7 +616,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetAllAEDs(System.IAsyncResult result) {
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetAllAEDs(System.IAsyncResult result) {
             return base.Channel.EndGetAllAEDs(result);
         }
         
@@ -625,7 +625,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
         
         private object[] OnEndGetAllAEDs(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetAllAEDs(result);
+            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetAllAEDs(result);
             return new object[] {
                     retVal};
         }
@@ -762,9 +762,9 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed> EndGetAllAEDs(System.IAsyncResult result) {
+            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetAllAEDs(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.aed>)(base.EndInvoke("GetAllAEDs", _args, result)));
+                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(base.EndInvoke("GetAllAEDs", _args, result)));
                 return _result;
             }
         }

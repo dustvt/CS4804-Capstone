@@ -73,7 +73,7 @@ namespace VTRescuePhoneApp
 
         void AEDFinderService_GetAllAEDsCompleted(object sender, AEDFinderServiceReference.GetAllAEDsCompletedEventArgs e)
         {
-            ObservableCollection<AEDFinderServiceReference.aed> aedList = e.Result;
+            ObservableCollection<AEDFinderServiceReference.AED> aedList = e.Result;
             Console.WriteLine(aedList);
             Debug.WriteLine(aedList);
         }

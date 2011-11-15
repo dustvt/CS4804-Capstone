@@ -68,6 +68,11 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service References\AEDFinderServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Views\AEDArrived.xaml.cs">
       <DependentUpon>AEDArrived.xaml</DependentUpon>
     </Compile>
@@ -93,11 +98,6 @@
       <DependentUpon>UnderConstruction.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\AEDFinderServiceReference\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Views\YesResponsive.xaml.cs">
       <DependentUpon>YesResponsive.xaml</DependentUpon>
     </Compile>
@@ -149,6 +149,18 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\AEDFinderServiceReference\Service1.wsdl" />
+    <None Include="Service References\AEDFinderServiceReference\Service1.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\Service11.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\Service12.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\Service13.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\Service14.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.AED.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <Resource Include="VTRescue.png" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
@@ -160,18 +172,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="ServiceReferences.ClientConfig" />
-    <None Include="Service References\AEDFinderServiceReference\Service1.wsdl" />
-    <None Include="Service References\AEDFinderServiceReference\Service1.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service11.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service12.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service13.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service14.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.aed.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ApplicationIcon.png">

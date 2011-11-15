@@ -8,13 +8,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
-  <xs:complexType name="ArrayOfaed">
+  <xs:complexType name="ArrayOfAED">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="aed" nillable="true" type="tns:aed" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AED" nillable="true" type="tns:AED" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfaed" nillable="true" type="tns:ArrayOfaed" />
-  <xs:complexType name="aed">
+  <xs:element name="ArrayOfAED" nillable="true" type="tns:ArrayOfAED" />
+  <xs:complexType name="AED">
     <xs:complexContent mixed="false">
       <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
         <xs:sequence>
@@ -22,14 +22,14 @@
           <xs:element minOccurs="0" name="SN" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="building" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="department" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="floor" nillable="true" type="xs:unsignedByte" />
-          <xs:element minOccurs="0" name="lat" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="floor" type="xs:int" />
+          <xs:element minOccurs="0" name="latitude" type="xs:double" />
           <xs:element minOccurs="0" name="loc_description" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="long" nillable="true" type="xs:double" />
-          <xs:element minOccurs="0" name="pad_expiration" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="longitude" type="xs:double" />
+          <xs:element minOccurs="0" name="pad_expiration" type="xs:dateTime" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="aed" nillable="true" type="tns:aed" />
+  <xs:element name="AED" nillable="true" type="tns:AED" />
 </xs:schema>
