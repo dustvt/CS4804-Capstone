@@ -76,6 +76,9 @@
     <Compile Include="Views\AEDArrived.xaml.cs">
       <DependentUpon>AEDArrived.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\AllAEDs.xaml.cs">
+      <DependentUpon>AllAEDs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NoPulse.xaml.cs">
       <DependentUpon>NoPulse.xaml</DependentUpon>
     </Compile>
@@ -112,6 +115,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AEDArrived.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AllAEDs.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -162,6 +169,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.Coordinate.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <Resource Include="VTRescue.png" />

@@ -1,11 +1,11 @@
-﻿<xapCache source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Release\VTRescuePhoneApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/28/2011 11:37:47 PM">
+﻿<xapCache source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Release\VTRescuePhoneApp.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="11/29/2011 2:11:45 PM">
   <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="11/1/2011 8:15:52 PM" />
   <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Background.png" archivePath="Background.png" lastWriteTime="11/1/2011 8:15:52 PM" />
   <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\ApplicationIcon.png" archivePath="ApplicationIcon.png" lastWriteTime="11/1/2011 8:15:52 PM" />
-  <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Release\VTRescuePhoneApp.dll" archivePath="VTRescuePhoneApp.dll" lastWriteTime="11/28/2011 11:37:42 PM" />
+  <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\obj\Release\VTRescuePhoneApp.dll" archivePath="VTRescuePhoneApp.dll" lastWriteTime="11/29/2011 2:11:41 PM" />
   <file source="C:\Program Files\Microsoft SDKs\Windows Phone\v7.0\Libraries\Silverlight\Microsoft.Phone.Controls.dll" archivePath="Microsoft.Phone.Controls.dll" lastWriteTime="9/15/2011 3:34:20 PM" />
   <file source="C:\Program Files\Microsoft SDKs\Windows Phone\v7.0\Libraries\Silverlight\Microsoft.Phone.Controls.Maps.dll" archivePath="Microsoft.Phone.Controls.Maps.dll" lastWriteTime="9/15/2011 3:34:20 PM" />
   <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\ServiceReferences.ClientConfig" archivePath="ServiceReferences.ClientConfig" lastWriteTime="11/28/2011 9:36:21 PM" />
   <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="11/1/2011 8:15:52 PM" />
-  <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="11/10/2011 1:16:22 PM" />
+  <file source="C:\Users\Min\Desktop\windows phone\CS4804-Capstone\VTRescuePhoneApp\VTRescuePhoneApp\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="11/29/2011 12:24:49 AM" />
 </xapCache>

@@ -16,6 +16,7 @@ namespace VTRescuePhoneApp
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        
         // Constructor
         public MainPage()
         {
@@ -36,7 +37,7 @@ namespace VTRescuePhoneApp
         private void button3_Click(object sender, RoutedEventArgs e)
         {
             PhoneCallTask pct = new PhoneCallTask();
-            //pct.DisplayName = "911";
+  
             pct.PhoneNumber = "911";
             pct.Show();  
         }

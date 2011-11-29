@@ -335,6 +335,7 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.building))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate>))]
     public partial class EntityKeyMember : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string KeyField;
@@ -445,6 +446,16 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         System.IAsyncResult BeginGetClosestBuilding(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState);
         
         VTRescuePhoneApp.AEDFinderServiceReference.building EndGetClosestBuilding(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetWalkingDirections", ReplyAction="http://tempuri.org/AEDServiceInterface/GetWalkingDirectionsResponse")]
+        System.IAsyncResult BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> EndGetWalkingDirections(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetClosestAEDs", ReplyAction="http://tempuri.org/AEDServiceInterface/GetClosestAEDsResponse")]
+        System.IAsyncResult BeginGetClosestAEDs(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState);
+        
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetClosestAEDs(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -529,6 +540,44 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetWalkingDirectionsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetWalkingDirectionsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetClosestAEDsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetClosestAEDsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class AEDServiceInterfaceClient : System.ServiceModel.ClientBase<VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface>, VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface {
         
         private BeginOperationDelegate onBeginGetDataDelegate;
@@ -554,6 +603,18 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         private EndOperationDelegate onEndGetClosestBuildingDelegate;
         
         private System.Threading.SendOrPostCallback onGetClosestBuildingCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginGetWalkingDirectionsDelegate;
+        
+        private EndOperationDelegate onEndGetWalkingDirectionsDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetWalkingDirectionsCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginGetClosestAEDsDelegate;
+        
+        private EndOperationDelegate onEndGetClosestAEDsDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetClosestAEDsCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -615,6 +676,10 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         public event System.EventHandler<GetAllAEDsCompletedEventArgs> GetAllAEDsCompleted;
         
         public event System.EventHandler<GetClosestBuildingCompletedEventArgs> GetClosestBuildingCompleted;
+        
+        public event System.EventHandler<GetWalkingDirectionsCompletedEventArgs> GetWalkingDirectionsCompleted;
+        
+        public event System.EventHandler<GetClosestAEDsCompletedEventArgs> GetClosestAEDsCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
@@ -802,6 +867,98 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
                         coord}, this.onEndGetClosestBuildingDelegate, this.onGetClosestBuildingCompletedDelegate, userState);
         }
         
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetWalkingDirections(coord, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetWalkingDirections(System.IAsyncResult result) {
+            return base.Channel.EndGetWalkingDirections(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetWalkingDirections(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[0]));
+            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetWalkingDirections(coord, callback, asyncState);
+        }
+        
+        private object[] OnEndGetWalkingDirections(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetWalkingDirections(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetWalkingDirectionsCompleted(object state) {
+            if ((this.GetWalkingDirectionsCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetWalkingDirectionsCompleted(this, new GetWalkingDirectionsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetWalkingDirectionsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord) {
+            this.GetWalkingDirectionsAsync(coord, null);
+        }
+        
+        public void GetWalkingDirectionsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, object userState) {
+            if ((this.onBeginGetWalkingDirectionsDelegate == null)) {
+                this.onBeginGetWalkingDirectionsDelegate = new BeginOperationDelegate(this.OnBeginGetWalkingDirections);
+            }
+            if ((this.onEndGetWalkingDirectionsDelegate == null)) {
+                this.onEndGetWalkingDirectionsDelegate = new EndOperationDelegate(this.OnEndGetWalkingDirections);
+            }
+            if ((this.onGetWalkingDirectionsCompletedDelegate == null)) {
+                this.onGetWalkingDirectionsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetWalkingDirectionsCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetWalkingDirectionsDelegate, new object[] {
+                        coord}, this.onEndGetWalkingDirectionsDelegate, this.onGetWalkingDirectionsCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetClosestAEDs(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetClosestAEDs(coord, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetClosestAEDs(System.IAsyncResult result) {
+            return base.Channel.EndGetClosestAEDs(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetClosestAEDs(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[0]));
+            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetClosestAEDs(coord, callback, asyncState);
+        }
+        
+        private object[] OnEndGetClosestAEDs(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetClosestAEDs(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetClosestAEDsCompleted(object state) {
+            if ((this.GetClosestAEDsCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetClosestAEDsCompleted(this, new GetClosestAEDsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetClosestAEDsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord) {
+            this.GetClosestAEDsAsync(coord, null);
+        }
+        
+        public void GetClosestAEDsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, object userState) {
+            if ((this.onBeginGetClosestAEDsDelegate == null)) {
+                this.onBeginGetClosestAEDsDelegate = new BeginOperationDelegate(this.OnBeginGetClosestAEDs);
+            }
+            if ((this.onEndGetClosestAEDsDelegate == null)) {
+                this.onEndGetClosestAEDsDelegate = new EndOperationDelegate(this.OnEndGetClosestAEDs);
+            }
+            if ((this.onGetClosestAEDsCompletedDelegate == null)) {
+                this.onGetClosestAEDsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetClosestAEDsCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetClosestAEDsDelegate, new object[] {
+                        coord}, this.onEndGetClosestAEDsDelegate, this.onGetClosestAEDsCompletedDelegate, userState);
+        }
+        
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
             return ((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(callback, asyncState);
         }
@@ -926,6 +1083,32 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
             public VTRescuePhoneApp.AEDFinderServiceReference.building EndGetClosestBuilding(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 VTRescuePhoneApp.AEDFinderServiceReference.building _result = ((VTRescuePhoneApp.AEDFinderServiceReference.building)(base.EndInvoke("GetClosestBuilding", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = coord;
+                System.IAsyncResult _result = base.BeginInvoke("GetWalkingDirections", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> EndGetWalkingDirections(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate>)(base.EndInvoke("GetWalkingDirections", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginGetClosestAEDs(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[1];
+                _args[0] = coord;
+                System.IAsyncResult _result = base.BeginInvoke("GetClosestAEDs", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetClosestAEDs(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(base.EndInvoke("GetClosestAEDs", _args, result)));
                 return _result;
             }
         }
