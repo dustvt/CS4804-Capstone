@@ -19,13 +19,11 @@ namespace VTRescuePhoneApp
     public partial class Page1 : PhoneApplicationPage
     {
         GeoCoordinateWatcher watcher;
+        Pushpin currentLocation;
+        Pushpin closestAED;
         public Page1()
         {
             InitializeComponent();
-            AEDFinderServiceReference.AEDServiceInterfaceClient AEDServiceInterfaceClient = new AEDFinderServiceReference.AEDServiceInterfaceClient();
-            AEDServiceInterfaceClient.GetAllAEDsCompleted += new EventHandler<AEDFinderServiceReference.GetAllAEDsCompletedEventArgs>(AEDFinderService_GetAllAEDsCompleted);
-
-            AEDServiceInterfaceClient.GetAllAEDsAsync();
 
             if (watcher == null)
             {
@@ -33,28 +31,51 @@ namespace VTRescuePhoneApp
                 {
                     MovementThreshold = 10
                 };
-
                 watcher.PositionChanged += new EventHandler<GeoPositionChangedEventArgs<GeoCoordinate>>(watcher_PositionChanged);
-
+               
                 watcher.Start();
             }
+
             map1.ZoomLevel = 15;
         }
 
         void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
-            map1.Center = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
-        }
-        void AEDFinderService_GetAllAEDsCompleted(object sender, AEDFinderServiceReference.GetAllAEDsCompletedEventArgs e)
-        {
-            ObservableCollection<AEDFinderServiceReference.AED> aedList = e.Result;
-            foreach (AEDFinderServiceReference.AED aed in aedList)
+            if(currentLocation != null)
             {
-                Pushpin pin = new Pushpin();
-                pin.Location = new GeoCoordinate((double)aed.latitude, (double)aed.@longitude);
-
-                map1.Children.Add(pin);
+                map1.Children.Remove(currentLocation);
             }
+            currentLocation = new Pushpin();
+            currentLocation.Content = "Current Location";
+            currentLocation.Location = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
+            map1.Children.Add(currentLocation);
+           
+            map1.Center = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
+
+            AEDFinderServiceReference.AEDServiceInterfaceClient AEDServiceInterfaceClient = new AEDFinderServiceReference.AEDServiceInterfaceClient();
+            AEDServiceInterfaceClient.GetClosestBuildingCompleted += new EventHandler<AEDFinderServiceReference.GetClosestBuildingCompletedEventArgs>(AEDFinderService_GetClosestBuildingCompleted);
+
+            AEDFinderServiceReference.Coordinate coord = new AEDFinderServiceReference.Coordinate();
+
+            coord.Latitude = e.Position.Location.Latitude;
+            coord.Longitude = e.Position.Location.Longitude;
+            AEDServiceInterfaceClient.GetClosestBuildingAsync(coord);
+        }
+
+        void AEDFinderService_GetClosestBuildingCompleted(object sender, AEDFinderServiceReference.GetClosestBuildingCompletedEventArgs e)
+        {
+            AEDFinderServiceReference.building building = e.Result;
+            
+            if (closestAED != null)
+            {
+                map1.Children.Remove(closestAED);
+            }
+            closestAED = new Pushpin();
+            closestAED.Location = new GeoCoordinate((double)building.latitude, (double)building.@longitude);
+            closestAED.Content = "Closest AED Building";
+            closestAED.Background = new SolidColorBrush(Colors.Red);
+            map1.Children.Add(closestAED);
+            
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

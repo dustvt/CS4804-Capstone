@@ -149,13 +149,16 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\AEDFinderServiceReference\AEDFinder.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\AEDFinder1.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\AEDFinder2.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\AEDFinder3.xsd" />
+    <None Include="Service References\AEDFinderServiceReference\AEDFinder4.xsd" />
     <None Include="Service References\AEDFinderServiceReference\Service1.wsdl" />
-    <None Include="Service References\AEDFinderServiceReference\Service1.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service11.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service12.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service13.xsd" />
-    <None Include="Service References\AEDFinderServiceReference\Service14.xsd" />
     <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.AED.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.building.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.CompositeType.datasource">
@@ -164,7 +167,7 @@
     <Resource Include="VTRescue.png" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml" />
-    <None Include="Service References\AEDFinderServiceReference\Service1.disco" />
+    <None Include="Service References\AEDFinderServiceReference\AEDFinder.disco" />
     <None Include="Service References\AEDFinderServiceReference\configuration91.svcinfo" />
     <None Include="Service References\AEDFinderServiceReference\configuration.svcinfo" />
     <None Include="Service References\AEDFinderServiceReference\Reference.svcmap">

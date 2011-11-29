@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ec4fAlGyvNRzYjqnP5t3+GrJ/Kg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Osmqu4mCtWvMnnndmXSePFE+jMo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_AEDServiceInterface">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_AEDServiceInterface" contract="AEDFinderServiceReference.AEDServiceInterface" bindingType="basicHttpBinding" address="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc" bindingConfiguration="BasicHttpBinding_AEDServiceInterface">
+    <endpoint name="BasicHttpBinding_AEDServiceInterface" contract="AEDFinderServiceReference.AEDServiceInterface" bindingType="basicHttpBinding" address="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc" bindingConfiguration="BasicHttpBinding_AEDServiceInterface">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc</serializedValue>
+          <serializedValue>http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

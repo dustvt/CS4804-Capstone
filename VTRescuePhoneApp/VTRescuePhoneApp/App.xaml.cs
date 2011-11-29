@@ -65,10 +65,11 @@ namespace VTRescuePhoneApp
         // This code will not execute when the application is reactivated
         private void Application_Launching(object sender, LaunchingEventArgs e)
         {
-            AEDFinderServiceReference.AEDServiceInterfaceClient AEDServiceInterfaceClient = new AEDFinderServiceReference.AEDServiceInterfaceClient();
-            AEDServiceInterfaceClient.GetAllAEDsCompleted += new EventHandler<AEDFinderServiceReference.GetAllAEDsCompletedEventArgs>(AEDFinderService_GetAllAEDsCompleted);
+            //AEDFinderServiceReference.AEDServiceInterfaceClient AEDServiceInterfaceClient = new AEDFinderServiceReference.AEDServiceInterfaceClient();
+           // AEDServiceInterfaceClient.GetAllAEDsCompleted += new EventHandler<AEDFinderServiceReference.GetAllAEDsCompletedEventArgs>(AEDFinderService_GetAllAEDsCompleted);
 
-            AEDServiceInterfaceClient.GetAllAEDsAsync();
+           // AEDServiceInterfaceClient.GetAllAEDsAsync();
+           
         }
 
         void AEDFinderService_GetAllAEDsCompleted(object sender, AEDFinderServiceReference.GetAllAEDsCompletedEventArgs e)

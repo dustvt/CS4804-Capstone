@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91de9362-ad8e-4d04-82f2-cb2bd373036c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f1c20302-d722-4054-b505-944d8fbb6b1d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -20,16 +20,16 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="20a97584-89b6-4e32-9013-fddc0ed5cdb3" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="b5c0258b-6d51-407a-b83e-ed202c9adcfe" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="7c70f11c-9cec-402d-9554-5b90e3335fda" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="9c0fc18a-fcfb-4139-a95f-ffa3db41c10e" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="f465f340-0c1b-4a6a-936d-dee0c8292b5c" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="f37eec3e-3b7e-4bb6-b8b3-2ad14da35a51" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?disco" />
-    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="d6824487-8fba-4901-8ad4-d6fff68fe1a6" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="AEDFinder.xsd" MetadataType="Schema" ID="80e4aa67-e667-4d81-a168-21ea88e63e3b" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="1a9c9570-25b5-4ba3-b747-11f063faf09b" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?wsdl" />
+    <MetadataFile FileName="AEDFinder1.xsd" MetadataType="Schema" ID="05116484-af62-4d63-815f-6d2fabd01c5d" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?xsd=xsd3" />
+    <MetadataFile FileName="AEDFinder2.xsd" MetadataType="Schema" ID="c8571393-334d-439d-8695-04a7f94c8614" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?xsd=xsd2" />
+    <MetadataFile FileName="AEDFinder3.xsd" MetadataType="Schema" ID="220df5d8-fef8-4efe-82f0-89b9cb348c75" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?xsd=xsd0" />
+    <MetadataFile FileName="AEDFinder.disco" MetadataType="Disco" ID="9a4546c2-a80f-4bf5-979e-19f21d89b06d" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?disco" />
+    <MetadataFile FileName="AEDFinder4.xsd" MetadataType="Schema" ID="20595170-d467-408d-97e2-3e39264c1ad6" SourceId="1" SourceUrl="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
