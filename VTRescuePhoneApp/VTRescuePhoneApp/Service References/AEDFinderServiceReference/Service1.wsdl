@@ -9,29 +9,11 @@
       <xsd:import schemaLocation="http://8e295fa9a22449d5b46e34c60d302d05.cloudapp.net/AEDFinder.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="AEDServiceInterface_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="AEDServiceInterface_GetClosestBuildings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosestBuildings" />
   </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
-  </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetDataUsingDataContract_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
-  </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetDataUsingDataContract_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
-  </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetAllAEDs_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllAEDs" />
-  </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetAllAEDs_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetAllAEDsResponse" />
-  </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetClosestBuilding_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetClosestBuilding" />
-  </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetClosestBuilding_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetClosestBuildingResponse" />
+  <wsdl:message name="AEDServiceInterface_GetClosestBuildings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosestBuildingsResponse" />
   </wsdl:message>
   <wsdl:message name="AEDServiceInterface_GetWalkingDirections_InputMessage">
     <wsdl:part name="parameters" element="tns:GetWalkingDirections" />
@@ -39,69 +21,30 @@
   <wsdl:message name="AEDServiceInterface_GetWalkingDirections_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetWalkingDirectionsResponse" />
   </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetClosestAEDs_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetClosestAEDs" />
+  <wsdl:message name="AEDServiceInterface_GetAEDsForBuilding_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAEDsForBuilding" />
   </wsdl:message>
-  <wsdl:message name="AEDServiceInterface_GetClosestAEDs_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetClosestAEDsResponse" />
+  <wsdl:message name="AEDServiceInterface_GetAEDsForBuilding_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAEDsForBuildingResponse" />
   </wsdl:message>
   <wsdl:portType name="AEDServiceInterface">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetData" message="tns:AEDServiceInterface_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetDataResponse" message="tns:AEDServiceInterface_GetData_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetDataUsingDataContract" message="tns:AEDServiceInterface_GetDataUsingDataContract_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetDataUsingDataContractResponse" message="tns:AEDServiceInterface_GetDataUsingDataContract_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetAllAEDs">
-      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetAllAEDs" message="tns:AEDServiceInterface_GetAllAEDs_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetAllAEDsResponse" message="tns:AEDServiceInterface_GetAllAEDs_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetClosestBuilding">
-      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetClosestBuilding" message="tns:AEDServiceInterface_GetClosestBuilding_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetClosestBuildingResponse" message="tns:AEDServiceInterface_GetClosestBuilding_OutputMessage" />
+    <wsdl:operation name="GetClosestBuildings">
+      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetClosestBuildings" message="tns:AEDServiceInterface_GetClosestBuildings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetClosestBuildingsResponse" message="tns:AEDServiceInterface_GetClosestBuildings_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetWalkingDirections">
       <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetWalkingDirections" message="tns:AEDServiceInterface_GetWalkingDirections_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetWalkingDirectionsResponse" message="tns:AEDServiceInterface_GetWalkingDirections_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetClosestAEDs">
-      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetClosestAEDs" message="tns:AEDServiceInterface_GetClosestAEDs_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetClosestAEDsResponse" message="tns:AEDServiceInterface_GetClosestAEDs_OutputMessage" />
+    <wsdl:operation name="GetAEDsForBuilding">
+      <wsdl:input wsaw:Action="http://tempuri.org/AEDServiceInterface/GetAEDsForBuilding" message="tns:AEDServiceInterface_GetAEDsForBuilding_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/AEDServiceInterface/GetAEDsForBuildingResponse" message="tns:AEDServiceInterface_GetAEDsForBuilding_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_AEDServiceInterface" type="tns:AEDServiceInterface">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDataUsingDataContract">
-      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetDataUsingDataContract" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetAllAEDs">
-      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetAllAEDs" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetClosestBuilding">
-      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetClosestBuilding" style="document" />
+    <wsdl:operation name="GetClosestBuildings">
+      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetClosestBuildings" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -118,8 +61,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetClosestAEDs">
-      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetClosestAEDs" style="document" />
+    <wsdl:operation name="GetAEDsForBuilding">
+      <soap:operation soapAction="http://tempuri.org/AEDServiceInterface/GetAEDsForBuilding" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

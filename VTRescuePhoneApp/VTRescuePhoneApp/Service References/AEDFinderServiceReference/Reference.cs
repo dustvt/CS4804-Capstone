@@ -17,35 +17,35 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole")]
-    public partial class CompositeType : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Runtime.Serialization.DataContractAttribute(Name="Coordinate", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole")]
+    public partial class Coordinate : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private bool BoolValueField;
+        private double LatitudeField;
         
-        private string StringValueField;
+        private double LongitudeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
+        public double Latitude {
             get {
-                return this.BoolValueField;
+                return this.LatitudeField;
             }
             set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
+                if ((this.LatitudeField.Equals(value) != true)) {
+                    this.LatitudeField = value;
+                    this.RaisePropertyChanged("Latitude");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
+        public double Longitude {
             get {
-                return this.StringValueField;
+                return this.LongitudeField;
             }
             set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
+                if ((this.LongitudeField.Equals(value) != true)) {
+                    this.LongitudeField = value;
+                    this.RaisePropertyChanged("Longitude");
                 }
             }
         }
@@ -56,6 +56,113 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="building", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole", IsReference=true)]
+    public partial class building : VTRescuePhoneApp.AEDFinderServiceReference.EntityObject {
+        
+        private int IDField;
+        
+        private double latitudeField;
+        
+        private double longitudeField;
+        
+        private string nameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double latitude {
+            get {
+                return this.latitudeField;
+            }
+            set {
+                if ((this.latitudeField.Equals(value) != true)) {
+                    this.latitudeField = value;
+                    this.RaisePropertyChanged("latitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double longitude {
+            get {
+                return this.longitudeField;
+            }
+            set {
+                if ((this.longitudeField.Equals(value) != true)) {
+                    this.longitudeField = value;
+                    this.RaisePropertyChanged("longitude");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StructuralObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.EntityObject))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.building))]
+    public partial class StructuralObject : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EntityObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.building))]
+    public partial class EntityObject : VTRescuePhoneApp.AEDFinderServiceReference.StructuralObject {
+        
+        private VTRescuePhoneApp.AEDFinderServiceReference.EntityKey EntityKeyField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public VTRescuePhoneApp.AEDFinderServiceReference.EntityKey EntityKey {
+            get {
+                return this.EntityKeyField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EntityKeyField, value) != true)) {
+                    this.EntityKeyField = value;
+                    this.RaisePropertyChanged("EntityKey");
+                }
             }
         }
     }
@@ -158,113 +265,6 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="StructuralObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.EntityObject))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.building))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
-    public partial class StructuralObject : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EntityObject", Namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses", IsReference=true)]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.building))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
-    public partial class EntityObject : VTRescuePhoneApp.AEDFinderServiceReference.StructuralObject {
-        
-        private VTRescuePhoneApp.AEDFinderServiceReference.EntityKey EntityKeyField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public VTRescuePhoneApp.AEDFinderServiceReference.EntityKey EntityKey {
-            get {
-                return this.EntityKeyField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EntityKeyField, value) != true)) {
-                    this.EntityKeyField = value;
-                    this.RaisePropertyChanged("EntityKey");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="building", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole", IsReference=true)]
-    public partial class building : VTRescuePhoneApp.AEDFinderServiceReference.EntityObject {
-        
-        private int IDField;
-        
-        private double latitudeField;
-        
-        private double longitudeField;
-        
-        private string nameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double latitude {
-            get {
-                return this.latitudeField;
-            }
-            set {
-                if ((this.latitudeField.Equals(value) != true)) {
-                    this.latitudeField = value;
-                    this.RaisePropertyChanged("latitude");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double longitude {
-            get {
-                return this.longitudeField;
-            }
-            set {
-                if ((this.longitudeField.Equals(value) != true)) {
-                    this.longitudeField = value;
-                    this.RaisePropertyChanged("longitude");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
-            get {
-                return this.nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
-                }
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="EntityKey", Namespace="http://schemas.datacontract.org/2004/07/System.Data", IsReference=true)]
     public partial class EntityKey : object, System.ComponentModel.INotifyPropertyChanged {
         
@@ -330,12 +330,12 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.EntityKeyMember>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.EntityObject))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.StructuralObject))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building>))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.building))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(VTRescuePhoneApp.AEDFinderServiceReference.AED))]
     public partial class EntityKeyMember : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string KeyField;
@@ -378,84 +378,24 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Coordinate", Namespace="http://schemas.datacontract.org/2004/07/AzureAEDFinderWCFServiceWebRole")]
-    public partial class Coordinate : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double LatitudeField;
-        
-        private double LongitudeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Latitude {
-            get {
-                return this.LatitudeField;
-            }
-            set {
-                if ((this.LatitudeField.Equals(value) != true)) {
-                    this.LatitudeField = value;
-                    this.RaisePropertyChanged("Latitude");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public double Longitude {
-            get {
-                return this.LongitudeField;
-            }
-            set {
-                if ((this.LongitudeField.Equals(value) != true)) {
-                    this.LongitudeField = value;
-                    this.RaisePropertyChanged("Longitude");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AEDFinderServiceReference.AEDServiceInterface")]
     public interface AEDServiceInterface {
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetData", ReplyAction="http://tempuri.org/AEDServiceInterface/GetDataResponse")]
-        System.IAsyncResult BeginGetData(int value, System.AsyncCallback callback, object asyncState);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetClosestBuildings", ReplyAction="http://tempuri.org/AEDServiceInterface/GetClosestBuildingsResponse")]
+        System.IAsyncResult BeginGetClosestBuildings(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, int numberOfBuidings, System.AsyncCallback callback, object asyncState);
         
-        string EndGetData(System.IAsyncResult result);
-        
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetDataUsingDataContract", ReplyAction="http://tempuri.org/AEDServiceInterface/GetDataUsingDataContractResponse")]
-        System.IAsyncResult BeginGetDataUsingDataContract(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType composite, System.AsyncCallback callback, object asyncState);
-        
-        VTRescuePhoneApp.AEDFinderServiceReference.CompositeType EndGetDataUsingDataContract(System.IAsyncResult result);
-        
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetAllAEDs", ReplyAction="http://tempuri.org/AEDServiceInterface/GetAllAEDsResponse")]
-        System.IAsyncResult BeginGetAllAEDs(System.AsyncCallback callback, object asyncState);
-        
-        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetAllAEDs(System.IAsyncResult result);
-        
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetClosestBuilding", ReplyAction="http://tempuri.org/AEDServiceInterface/GetClosestBuildingResponse")]
-        System.IAsyncResult BeginGetClosestBuilding(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState);
-        
-        VTRescuePhoneApp.AEDFinderServiceReference.building EndGetClosestBuilding(System.IAsyncResult result);
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building> EndGetClosestBuildings(System.IAsyncResult result);
         
         [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetWalkingDirections", ReplyAction="http://tempuri.org/AEDServiceInterface/GetWalkingDirectionsResponse")]
-        System.IAsyncResult BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState);
+        System.IAsyncResult BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate from, VTRescuePhoneApp.AEDFinderServiceReference.Coordinate to, System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.Coordinate> EndGetWalkingDirections(System.IAsyncResult result);
         
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetClosestAEDs", ReplyAction="http://tempuri.org/AEDServiceInterface/GetClosestAEDsResponse")]
-        System.IAsyncResult BeginGetClosestAEDs(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState);
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/AEDServiceInterface/GetAEDsForBuilding", ReplyAction="http://tempuri.org/AEDServiceInterface/GetAEDsForBuildingResponse")]
+        System.IAsyncResult BeginGetAEDsForBuilding(string building, System.AsyncCallback callback, object asyncState);
         
-        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetClosestAEDs(System.IAsyncResult result);
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetAEDsForBuilding(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -464,76 +404,19 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class GetClosestBuildingsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        public GetDataCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        public GetClosestBuildingsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
         
-        public string Result {
+        public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building> Result {
             get {
                 base.RaiseExceptionIfNecessary();
-                return ((string)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetDataUsingDataContractCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public VTRescuePhoneApp.AEDFinderServiceReference.CompositeType Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((VTRescuePhoneApp.AEDFinderServiceReference.CompositeType)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetAllAEDsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetAllAEDsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(this.results[0]));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetClosestBuildingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        public GetClosestBuildingCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        public VTRescuePhoneApp.AEDFinderServiceReference.building Result {
-            get {
-                base.RaiseExceptionIfNecessary();
-                return ((VTRescuePhoneApp.AEDFinderServiceReference.building)(this.results[0]));
+                return ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building>)(this.results[0]));
             }
         }
     }
@@ -559,11 +442,11 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class GetClosestAEDsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class GetAEDsForBuildingCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        public GetClosestAEDsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        public GetAEDsForBuildingCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -580,29 +463,11 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class AEDServiceInterfaceClient : System.ServiceModel.ClientBase<VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface>, VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface {
         
-        private BeginOperationDelegate onBeginGetDataDelegate;
+        private BeginOperationDelegate onBeginGetClosestBuildingsDelegate;
         
-        private EndOperationDelegate onEndGetDataDelegate;
+        private EndOperationDelegate onEndGetClosestBuildingsDelegate;
         
-        private System.Threading.SendOrPostCallback onGetDataCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetDataUsingDataContractDelegate;
-        
-        private EndOperationDelegate onEndGetDataUsingDataContractDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetDataUsingDataContractCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetAllAEDsDelegate;
-        
-        private EndOperationDelegate onEndGetAllAEDsDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetAllAEDsCompletedDelegate;
-        
-        private BeginOperationDelegate onBeginGetClosestBuildingDelegate;
-        
-        private EndOperationDelegate onEndGetClosestBuildingDelegate;
-        
-        private System.Threading.SendOrPostCallback onGetClosestBuildingCompletedDelegate;
+        private System.Threading.SendOrPostCallback onGetClosestBuildingsCompletedDelegate;
         
         private BeginOperationDelegate onBeginGetWalkingDirectionsDelegate;
         
@@ -610,11 +475,11 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         
         private System.Threading.SendOrPostCallback onGetWalkingDirectionsCompletedDelegate;
         
-        private BeginOperationDelegate onBeginGetClosestAEDsDelegate;
+        private BeginOperationDelegate onBeginGetAEDsForBuildingDelegate;
         
-        private EndOperationDelegate onEndGetClosestAEDsDelegate;
+        private EndOperationDelegate onEndGetAEDsForBuildingDelegate;
         
-        private System.Threading.SendOrPostCallback onGetClosestAEDsCompletedDelegate;
+        private System.Threading.SendOrPostCallback onGetAEDsForBuildingCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -669,207 +534,67 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
             }
         }
         
-        public event System.EventHandler<GetDataCompletedEventArgs> GetDataCompleted;
-        
-        public event System.EventHandler<GetDataUsingDataContractCompletedEventArgs> GetDataUsingDataContractCompleted;
-        
-        public event System.EventHandler<GetAllAEDsCompletedEventArgs> GetAllAEDsCompleted;
-        
-        public event System.EventHandler<GetClosestBuildingCompletedEventArgs> GetClosestBuildingCompleted;
+        public event System.EventHandler<GetClosestBuildingsCompletedEventArgs> GetClosestBuildingsCompleted;
         
         public event System.EventHandler<GetWalkingDirectionsCompletedEventArgs> GetWalkingDirectionsCompleted;
         
-        public event System.EventHandler<GetClosestAEDsCompletedEventArgs> GetClosestAEDsCompleted;
+        public event System.EventHandler<GetAEDsForBuildingCompletedEventArgs> GetAEDsForBuildingCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetData(int value, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetData(value, callback, asyncState);
+        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetClosestBuildings(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, int numberOfBuidings, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetClosestBuildings(coord, numberOfBuidings, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        string VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetData(System.IAsyncResult result) {
-            return base.Channel.EndGetData(result);
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetClosestBuildings(System.IAsyncResult result) {
+            return base.Channel.EndGetClosestBuildings(result);
         }
         
-        private System.IAsyncResult OnBeginGetData(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            int value = ((int)(inValues[0]));
-            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetData(value, callback, asyncState);
-        }
-        
-        private object[] OnEndGetData(System.IAsyncResult result) {
-            string retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetData(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetDataCompleted(object state) {
-            if ((this.GetDataCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetDataCompleted(this, new GetDataCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetDataAsync(int value) {
-            this.GetDataAsync(value, null);
-        }
-        
-        public void GetDataAsync(int value, object userState) {
-            if ((this.onBeginGetDataDelegate == null)) {
-                this.onBeginGetDataDelegate = new BeginOperationDelegate(this.OnBeginGetData);
-            }
-            if ((this.onEndGetDataDelegate == null)) {
-                this.onEndGetDataDelegate = new EndOperationDelegate(this.OnEndGetData);
-            }
-            if ((this.onGetDataCompletedDelegate == null)) {
-                this.onGetDataCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetDataCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetDataDelegate, new object[] {
-                        value}, this.onEndGetDataDelegate, this.onGetDataCompletedDelegate, userState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetDataUsingDataContract(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType composite, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetDataUsingDataContract(composite, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        VTRescuePhoneApp.AEDFinderServiceReference.CompositeType VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetDataUsingDataContract(System.IAsyncResult result) {
-            return base.Channel.EndGetDataUsingDataContract(result);
-        }
-        
-        private System.IAsyncResult OnBeginGetDataUsingDataContract(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            VTRescuePhoneApp.AEDFinderServiceReference.CompositeType composite = ((VTRescuePhoneApp.AEDFinderServiceReference.CompositeType)(inValues[0]));
-            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetDataUsingDataContract(composite, callback, asyncState);
-        }
-        
-        private object[] OnEndGetDataUsingDataContract(System.IAsyncResult result) {
-            VTRescuePhoneApp.AEDFinderServiceReference.CompositeType retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetDataUsingDataContract(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetDataUsingDataContractCompleted(object state) {
-            if ((this.GetDataUsingDataContractCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetDataUsingDataContractCompleted(this, new GetDataUsingDataContractCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetDataUsingDataContractAsync(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType composite) {
-            this.GetDataUsingDataContractAsync(composite, null);
-        }
-        
-        public void GetDataUsingDataContractAsync(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType composite, object userState) {
-            if ((this.onBeginGetDataUsingDataContractDelegate == null)) {
-                this.onBeginGetDataUsingDataContractDelegate = new BeginOperationDelegate(this.OnBeginGetDataUsingDataContract);
-            }
-            if ((this.onEndGetDataUsingDataContractDelegate == null)) {
-                this.onEndGetDataUsingDataContractDelegate = new EndOperationDelegate(this.OnEndGetDataUsingDataContract);
-            }
-            if ((this.onGetDataUsingDataContractCompletedDelegate == null)) {
-                this.onGetDataUsingDataContractCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetDataUsingDataContractCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetDataUsingDataContractDelegate, new object[] {
-                        composite}, this.onEndGetDataUsingDataContractDelegate, this.onGetDataUsingDataContractCompletedDelegate, userState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetAllAEDs(System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetAllAEDs(callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetAllAEDs(System.IAsyncResult result) {
-            return base.Channel.EndGetAllAEDs(result);
-        }
-        
-        private System.IAsyncResult OnBeginGetAllAEDs(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetAllAEDs(callback, asyncState);
-        }
-        
-        private object[] OnEndGetAllAEDs(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetAllAEDs(result);
-            return new object[] {
-                    retVal};
-        }
-        
-        private void OnGetAllAEDsCompleted(object state) {
-            if ((this.GetAllAEDsCompleted != null)) {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetAllAEDsCompleted(this, new GetAllAEDsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
-        }
-        
-        public void GetAllAEDsAsync() {
-            this.GetAllAEDsAsync(null);
-        }
-        
-        public void GetAllAEDsAsync(object userState) {
-            if ((this.onBeginGetAllAEDsDelegate == null)) {
-                this.onBeginGetAllAEDsDelegate = new BeginOperationDelegate(this.OnBeginGetAllAEDs);
-            }
-            if ((this.onEndGetAllAEDsDelegate == null)) {
-                this.onEndGetAllAEDsDelegate = new EndOperationDelegate(this.OnEndGetAllAEDs);
-            }
-            if ((this.onGetAllAEDsCompletedDelegate == null)) {
-                this.onGetAllAEDsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetAllAEDsCompleted);
-            }
-            base.InvokeAsync(this.onBeginGetAllAEDsDelegate, null, this.onEndGetAllAEDsDelegate, this.onGetAllAEDsCompletedDelegate, userState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetClosestBuilding(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetClosestBuilding(coord, callback, asyncState);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        VTRescuePhoneApp.AEDFinderServiceReference.building VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetClosestBuilding(System.IAsyncResult result) {
-            return base.Channel.EndGetClosestBuilding(result);
-        }
-        
-        private System.IAsyncResult OnBeginGetClosestBuilding(object[] inValues, System.AsyncCallback callback, object asyncState) {
+        private System.IAsyncResult OnBeginGetClosestBuildings(object[] inValues, System.AsyncCallback callback, object asyncState) {
             VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[0]));
-            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetClosestBuilding(coord, callback, asyncState);
+            int numberOfBuidings = ((int)(inValues[1]));
+            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetClosestBuildings(coord, numberOfBuidings, callback, asyncState);
         }
         
-        private object[] OnEndGetClosestBuilding(System.IAsyncResult result) {
-            VTRescuePhoneApp.AEDFinderServiceReference.building retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetClosestBuilding(result);
+        private object[] OnEndGetClosestBuildings(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetClosestBuildings(result);
             return new object[] {
                     retVal};
         }
         
-        private void OnGetClosestBuildingCompleted(object state) {
-            if ((this.GetClosestBuildingCompleted != null)) {
+        private void OnGetClosestBuildingsCompleted(object state) {
+            if ((this.GetClosestBuildingsCompleted != null)) {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetClosestBuildingCompleted(this, new GetClosestBuildingCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.GetClosestBuildingsCompleted(this, new GetClosestBuildingsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
         
-        public void GetClosestBuildingAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord) {
-            this.GetClosestBuildingAsync(coord, null);
+        public void GetClosestBuildingsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, int numberOfBuidings) {
+            this.GetClosestBuildingsAsync(coord, numberOfBuidings, null);
         }
         
-        public void GetClosestBuildingAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, object userState) {
-            if ((this.onBeginGetClosestBuildingDelegate == null)) {
-                this.onBeginGetClosestBuildingDelegate = new BeginOperationDelegate(this.OnBeginGetClosestBuilding);
+        public void GetClosestBuildingsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, int numberOfBuidings, object userState) {
+            if ((this.onBeginGetClosestBuildingsDelegate == null)) {
+                this.onBeginGetClosestBuildingsDelegate = new BeginOperationDelegate(this.OnBeginGetClosestBuildings);
             }
-            if ((this.onEndGetClosestBuildingDelegate == null)) {
-                this.onEndGetClosestBuildingDelegate = new EndOperationDelegate(this.OnEndGetClosestBuilding);
+            if ((this.onEndGetClosestBuildingsDelegate == null)) {
+                this.onEndGetClosestBuildingsDelegate = new EndOperationDelegate(this.OnEndGetClosestBuildings);
             }
-            if ((this.onGetClosestBuildingCompletedDelegate == null)) {
-                this.onGetClosestBuildingCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetClosestBuildingCompleted);
+            if ((this.onGetClosestBuildingsCompletedDelegate == null)) {
+                this.onGetClosestBuildingsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetClosestBuildingsCompleted);
             }
-            base.InvokeAsync(this.onBeginGetClosestBuildingDelegate, new object[] {
-                        coord}, this.onEndGetClosestBuildingDelegate, this.onGetClosestBuildingCompletedDelegate, userState);
+            base.InvokeAsync(this.onBeginGetClosestBuildingsDelegate, new object[] {
+                        coord,
+                        numberOfBuidings}, this.onEndGetClosestBuildingsDelegate, this.onGetClosestBuildingsCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetWalkingDirections(coord, callback, asyncState);
+        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate from, VTRescuePhoneApp.AEDFinderServiceReference.Coordinate to, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetWalkingDirections(from, to, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -878,8 +603,9 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
         }
         
         private System.IAsyncResult OnBeginGetWalkingDirections(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[0]));
-            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetWalkingDirections(coord, callback, asyncState);
+            VTRescuePhoneApp.AEDFinderServiceReference.Coordinate from = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[0]));
+            VTRescuePhoneApp.AEDFinderServiceReference.Coordinate to = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[1]));
+            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetWalkingDirections(from, to, callback, asyncState);
         }
         
         private object[] OnEndGetWalkingDirections(System.IAsyncResult result) {
@@ -895,11 +621,11 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
             }
         }
         
-        public void GetWalkingDirectionsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord) {
-            this.GetWalkingDirectionsAsync(coord, null);
+        public void GetWalkingDirectionsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate from, VTRescuePhoneApp.AEDFinderServiceReference.Coordinate to) {
+            this.GetWalkingDirectionsAsync(from, to, null);
         }
         
-        public void GetWalkingDirectionsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, object userState) {
+        public void GetWalkingDirectionsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate from, VTRescuePhoneApp.AEDFinderServiceReference.Coordinate to, object userState) {
             if ((this.onBeginGetWalkingDirectionsDelegate == null)) {
                 this.onBeginGetWalkingDirectionsDelegate = new BeginOperationDelegate(this.OnBeginGetWalkingDirections);
             }
@@ -910,53 +636,54 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
                 this.onGetWalkingDirectionsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetWalkingDirectionsCompleted);
             }
             base.InvokeAsync(this.onBeginGetWalkingDirectionsDelegate, new object[] {
-                        coord}, this.onEndGetWalkingDirectionsDelegate, this.onGetWalkingDirectionsCompletedDelegate, userState);
+                        from,
+                        to}, this.onEndGetWalkingDirectionsDelegate, this.onGetWalkingDirectionsCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetClosestAEDs(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
-            return base.Channel.BeginGetClosestAEDs(coord, callback, asyncState);
+        System.IAsyncResult VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.BeginGetAEDsForBuilding(string building, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetAEDsForBuilding(building, callback, asyncState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetClosestAEDs(System.IAsyncResult result) {
-            return base.Channel.EndGetClosestAEDs(result);
+        System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface.EndGetAEDsForBuilding(System.IAsyncResult result) {
+            return base.Channel.EndGetAEDsForBuilding(result);
         }
         
-        private System.IAsyncResult OnBeginGetClosestAEDs(object[] inValues, System.AsyncCallback callback, object asyncState) {
-            VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord = ((VTRescuePhoneApp.AEDFinderServiceReference.Coordinate)(inValues[0]));
-            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetClosestAEDs(coord, callback, asyncState);
+        private System.IAsyncResult OnBeginGetAEDsForBuilding(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string building = ((string)(inValues[0]));
+            return ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).BeginGetAEDsForBuilding(building, callback, asyncState);
         }
         
-        private object[] OnEndGetClosestAEDs(System.IAsyncResult result) {
-            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetClosestAEDs(result);
+        private object[] OnEndGetAEDsForBuilding(System.IAsyncResult result) {
+            System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> retVal = ((VTRescuePhoneApp.AEDFinderServiceReference.AEDServiceInterface)(this)).EndGetAEDsForBuilding(result);
             return new object[] {
                     retVal};
         }
         
-        private void OnGetClosestAEDsCompleted(object state) {
-            if ((this.GetClosestAEDsCompleted != null)) {
+        private void OnGetAEDsForBuildingCompleted(object state) {
+            if ((this.GetAEDsForBuildingCompleted != null)) {
                 InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.GetClosestAEDsCompleted(this, new GetClosestAEDsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+                this.GetAEDsForBuildingCompleted(this, new GetAEDsForBuildingCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
             }
         }
         
-        public void GetClosestAEDsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord) {
-            this.GetClosestAEDsAsync(coord, null);
+        public void GetAEDsForBuildingAsync(string building) {
+            this.GetAEDsForBuildingAsync(building, null);
         }
         
-        public void GetClosestAEDsAsync(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, object userState) {
-            if ((this.onBeginGetClosestAEDsDelegate == null)) {
-                this.onBeginGetClosestAEDsDelegate = new BeginOperationDelegate(this.OnBeginGetClosestAEDs);
+        public void GetAEDsForBuildingAsync(string building, object userState) {
+            if ((this.onBeginGetAEDsForBuildingDelegate == null)) {
+                this.onBeginGetAEDsForBuildingDelegate = new BeginOperationDelegate(this.OnBeginGetAEDsForBuilding);
             }
-            if ((this.onEndGetClosestAEDsDelegate == null)) {
-                this.onEndGetClosestAEDsDelegate = new EndOperationDelegate(this.OnEndGetClosestAEDs);
+            if ((this.onEndGetAEDsForBuildingDelegate == null)) {
+                this.onEndGetAEDsForBuildingDelegate = new EndOperationDelegate(this.OnEndGetAEDsForBuilding);
             }
-            if ((this.onGetClosestAEDsCompletedDelegate == null)) {
-                this.onGetClosestAEDsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetClosestAEDsCompleted);
+            if ((this.onGetAEDsForBuildingCompletedDelegate == null)) {
+                this.onGetAEDsForBuildingCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetAEDsForBuildingCompleted);
             }
-            base.InvokeAsync(this.onBeginGetClosestAEDsDelegate, new object[] {
-                        coord}, this.onEndGetClosestAEDsDelegate, this.onGetClosestAEDsCompletedDelegate, userState);
+            base.InvokeAsync(this.onBeginGetAEDsForBuildingDelegate, new object[] {
+                        building}, this.onEndGetAEDsForBuildingDelegate, this.onGetAEDsForBuildingCompletedDelegate, userState);
         }
         
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
@@ -1035,60 +762,24 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
                     base(client) {
             }
             
-            public System.IAsyncResult BeginGetData(int value, System.AsyncCallback callback, object asyncState) {
-                object[] _args = new object[1];
-                _args[0] = value;
-                System.IAsyncResult _result = base.BeginInvoke("GetData", _args, callback, asyncState);
-                return _result;
-            }
-            
-            public string EndGetData(System.IAsyncResult result) {
-                object[] _args = new object[0];
-                string _result = ((string)(base.EndInvoke("GetData", _args, result)));
-                return _result;
-            }
-            
-            public System.IAsyncResult BeginGetDataUsingDataContract(VTRescuePhoneApp.AEDFinderServiceReference.CompositeType composite, System.AsyncCallback callback, object asyncState) {
-                object[] _args = new object[1];
-                _args[0] = composite;
-                System.IAsyncResult _result = base.BeginInvoke("GetDataUsingDataContract", _args, callback, asyncState);
-                return _result;
-            }
-            
-            public VTRescuePhoneApp.AEDFinderServiceReference.CompositeType EndGetDataUsingDataContract(System.IAsyncResult result) {
-                object[] _args = new object[0];
-                VTRescuePhoneApp.AEDFinderServiceReference.CompositeType _result = ((VTRescuePhoneApp.AEDFinderServiceReference.CompositeType)(base.EndInvoke("GetDataUsingDataContract", _args, result)));
-                return _result;
-            }
-            
-            public System.IAsyncResult BeginGetAllAEDs(System.AsyncCallback callback, object asyncState) {
-                object[] _args = new object[0];
-                System.IAsyncResult _result = base.BeginInvoke("GetAllAEDs", _args, callback, asyncState);
-                return _result;
-            }
-            
-            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetAllAEDs(System.IAsyncResult result) {
-                object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(base.EndInvoke("GetAllAEDs", _args, result)));
-                return _result;
-            }
-            
-            public System.IAsyncResult BeginGetClosestBuilding(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
-                object[] _args = new object[1];
+            public System.IAsyncResult BeginGetClosestBuildings(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, int numberOfBuidings, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[2];
                 _args[0] = coord;
-                System.IAsyncResult _result = base.BeginInvoke("GetClosestBuilding", _args, callback, asyncState);
+                _args[1] = numberOfBuidings;
+                System.IAsyncResult _result = base.BeginInvoke("GetClosestBuildings", _args, callback, asyncState);
                 return _result;
             }
             
-            public VTRescuePhoneApp.AEDFinderServiceReference.building EndGetClosestBuilding(System.IAsyncResult result) {
+            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building> EndGetClosestBuildings(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                VTRescuePhoneApp.AEDFinderServiceReference.building _result = ((VTRescuePhoneApp.AEDFinderServiceReference.building)(base.EndInvoke("GetClosestBuilding", _args, result)));
+                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.building>)(base.EndInvoke("GetClosestBuildings", _args, result)));
                 return _result;
             }
             
-            public System.IAsyncResult BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
-                object[] _args = new object[1];
-                _args[0] = coord;
+            public System.IAsyncResult BeginGetWalkingDirections(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate from, VTRescuePhoneApp.AEDFinderServiceReference.Coordinate to, System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[2];
+                _args[0] = from;
+                _args[1] = to;
                 System.IAsyncResult _result = base.BeginInvoke("GetWalkingDirections", _args, callback, asyncState);
                 return _result;
             }
@@ -1099,16 +790,16 @@ namespace VTRescuePhoneApp.AEDFinderServiceReference {
                 return _result;
             }
             
-            public System.IAsyncResult BeginGetClosestAEDs(VTRescuePhoneApp.AEDFinderServiceReference.Coordinate coord, System.AsyncCallback callback, object asyncState) {
+            public System.IAsyncResult BeginGetAEDsForBuilding(string building, System.AsyncCallback callback, object asyncState) {
                 object[] _args = new object[1];
-                _args[0] = coord;
-                System.IAsyncResult _result = base.BeginInvoke("GetClosestAEDs", _args, callback, asyncState);
+                _args[0] = building;
+                System.IAsyncResult _result = base.BeginInvoke("GetAEDsForBuilding", _args, callback, asyncState);
                 return _result;
             }
             
-            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetClosestAEDs(System.IAsyncResult result) {
+            public System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> EndGetAEDsForBuilding(System.IAsyncResult result) {
                 object[] _args = new object[0];
-                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(base.EndInvoke("GetClosestAEDs", _args, result)));
+                System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED> _result = ((System.Collections.ObjectModel.ObservableCollection<VTRescuePhoneApp.AEDFinderServiceReference.AED>)(base.EndInvoke("GetAEDsForBuilding", _args, result)));
                 return _result;
             }
         }

@@ -30,7 +30,7 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Margin="12,17,12,0" Grid.ColumnSpan="2" Grid.RowSpan="2">
             <Button Content="Emergency" Height="190" HorizontalAlignment="Left" Name="button1" VerticalAlignment="Top" Width="456" Click="button1_Click" Margin="0,163,0,0" Background="DodgerBlue" BorderThickness="0" FontSize="50" FontStyle="Normal" Foreground="White" />
-            <Button Content="Non-Emergency" Height="190" HorizontalAlignment="Left" Margin="0,555,0,0" Name="button2" VerticalAlignment="Top" Width="456" Click="button2_Click" Background="LightGreen" BorderThickness="0" FontSize="50" FontStyle="Normal" Foreground="White" />
+            <Button Content="Settings" Height="190" HorizontalAlignment="Left" Margin="0,555,0,0" Name="button2" VerticalAlignment="Top" Width="456" Click="button2_Click" Background="LightGreen" BorderThickness="0" FontSize="50" FontStyle="Normal" Foreground="White" />
             <Button Content="Call 911" Height="190" HorizontalAlignment="Center" Margin="0,359,0,0" Name="button3" VerticalAlignment="Top" Width="456" Click="button3_Click" Background="Plum" BorderThickness="0" Padding="0" UseLayoutRounding="True" FontSize="50" FontStyle="Normal" FontWeight="ExtraLight" Foreground="White" />
             <Border BorderBrush="Silver" BorderThickness="0" Height="150" HorizontalAlignment="Left" Name="border1" VerticalAlignment="Top" Width="430" Margin="13,3,0,0">
                 <Border.Background>

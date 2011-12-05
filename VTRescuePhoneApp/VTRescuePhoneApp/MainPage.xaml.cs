@@ -31,7 +31,7 @@ namespace VTRescuePhoneApp
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Views/UnderConstruction.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Views/Settings.xaml", UriKind.Relative));
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)

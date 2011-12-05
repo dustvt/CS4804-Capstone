@@ -97,8 +97,8 @@
     <Compile Include="Views\Responsive.xaml.cs">
       <DependentUpon>Responsive.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\UnderConstruction.xaml.cs">
-      <DependentUpon>UnderConstruction.xaml</DependentUpon>
+    <Compile Include="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\YesResponsive.xaml.cs">
@@ -146,7 +146,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\UnderConstruction.xaml">
+    <Page Include="Views\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,9 +166,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.building.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\AEDFinderServiceReference\VTRescuePhoneApp.AEDFinderServiceReference.Coordinate.datasource">
