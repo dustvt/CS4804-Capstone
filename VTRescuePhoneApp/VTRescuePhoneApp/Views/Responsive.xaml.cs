@@ -31,7 +31,7 @@ namespace VTRescuePhoneApp.Views
             yes.HorizontalOffset = 10;
             yes.Closed += (s1, e1) =>
             {
-                NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
+                //NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
             };
             
         }

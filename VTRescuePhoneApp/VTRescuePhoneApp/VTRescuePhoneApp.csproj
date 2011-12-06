@@ -82,6 +82,12 @@
     <Compile Include="Views\NoPulse.xaml.cs">
       <DependentUpon>NoPulse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ShowAllAEDs.xaml.cs">
+      <DependentUpon>ShowAllAEDs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShowAllBuildings.xaml.cs">
+      <DependentUpon>ShowAllBuildings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\YesPulse.xaml.cs">
       <DependentUpon>YesPulse.xaml</DependentUpon>
     </Compile>
@@ -125,6 +131,14 @@
     <Page Include="Views\NoPulse.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ShowAllAEDs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShowAllBuildings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\YesPulse.xaml">
       <Generator>MSBuild:Compile</Generator>

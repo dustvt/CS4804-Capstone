@@ -19,7 +19,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <TextBlock Height="126" HorizontalAlignment="Left" Margin="131,72,0,282" Name="textBlock1" Text="Call 911 - Attempt to determine nature of injury" VerticalAlignment="Center" Width="242" FontWeight="Normal" TextWrapping="Wrap" TextAlignment="Center" FontSize="28" />
-        <Button Content="Return to Main Menu" Height="72" HorizontalAlignment="Left" Margin="123,204,0,0" Name="button1" VerticalAlignment="Top" Width="250" BorderBrush="White" BorderThickness="4" FontSize="20" Foreground="WhiteSmoke" UseLayoutRounding="True" Click="button1_Click">
+        <Button Content="Close" Height="72" HorizontalAlignment="Left" Margin="175,204,0,0" Name="button1" VerticalAlignment="Top" Width="160" BorderBrush="White" BorderThickness="4" FontSize="20" Foreground="WhiteSmoke" UseLayoutRounding="True" Click="button1_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
                     <GradientStop Color="Violet" Offset="0" />

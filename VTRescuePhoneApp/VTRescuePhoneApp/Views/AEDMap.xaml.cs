@@ -55,11 +55,11 @@ namespace VTRescuePhoneApp
 
         void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
-           /* if(currentLocation != null)
+            if(currentLocation != null)
             {
                 map1.Children.Remove(currentLocation);
             }
-            */
+            
             currentLocation = new Pushpin();
             currentLocation.Content = "Current Location";
             currentLocation.Location = new GeoCoordinate(e.Position.Location.Latitude, e.Position.Location.Longitude);
